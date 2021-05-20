@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+{% extends "app/layout.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <h2>{{ title }}</h2>
+    <li /><a href="https://www.hlebpskov.ru/" target="_blank"> <img src="{% static 'app/content/pskhleb.png' %}" alt="Logo ph" /></a></ul><br />
+    <li /><a href="https://craftology.ru/" target="_blank"> <img src="{% static 'app/content/craftology.png' %}" alt="Logo cl" /></a></ul><br />
+    <li /><a href="https://homebaked.ru/" target="_blank"> <img src="{% static 'app/content/homebaked.png' %}" alt="Logo hb" /></a></ul><br />
+</head>
+<body>
+
+</body>
+</html>
+{% endblock %}

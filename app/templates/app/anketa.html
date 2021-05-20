@@ -1,0 +1,74 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% if form != None %}
+ <br><h2>Отправьте, пожалуйста, заполненную анкету</h2><br>
+<div>
+    <form method="post">
+      {% csrf_token %}
+      <label for="{{ form.name.id_for_label }}">{{ form.name.label }}</label>
+      {{ form.name }}<br>
+      <label for="{{ form.city.id_for_label }}">{{ form.city.label }}</label>
+      {{ form.city }}<br>
+     <label for="{{ form.tel.id_for_label }}">{{ form.tel.label }}</label>
+      {{ form.tel }}<br>
+     <label for="{{ form.gender.id_for_label }}">{{form.gender.label }}</label>
+      {{ form.gender }}
+      <label for="{{ form.notice.id_for_label }}">{{form.notice.label }}</label>
+      {{ form.notice }}<br><br>
+      <label for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
+      {{ form.email }}<br><br>
+      <label for="{{ form.message.id_for_label }}">{{ form.message.label }}</label>
+      {{ form.message }}<br><br>
+    
+       <button id="b1" type="submit">
+           Отправить
+       </button>
+      </form>
+  </div>
+{% else %}
+ <br><h2>Благодарим за предоставленную информацию!</h2>
+ <h3>Вы сообщили о себе следующее:</h3>
+ <u1>
+     <li><span>Имя:</span> {{ data.name }}</li>
+     <li><span>Город:</span> {{ data.city }}</li>
+     <li><span>Номер телефона:</span> {{ data.tel }}</li>
+     <li><span>Пол:</span>{{ data.gender }}</li>
+     <li><span>Получать новости сайта на e-mail:</span> {{ data.notice }}</li>
+     <li><span>E-mail:</span> {{ data.email }}</li>
+     <li><span>Отзыв:</span> {{ data.message }}</li>
+ </u1>
+{% endif %}
+
+<script>
+   function b1_point() { $('#b1').css('color', 'yellow'); }
+   function b1_unpoint() { $('#b1').css('color', 'red'); }
+   function name_focus() { $('#id_name').css('background-color', 'Mediumaquamarine'); }
+   function name_blur() { $('#id_name').css('background-color', 'white'); }
+   function city_focus() { $('#id_city').css('background-color', 'Mediumaquamarine'); }
+   function city_blur() { $('#id_city').css('background-color', 'white'); }
+   function tel_focus() { $('#id_tel').css('background-color', 'Mediumaquamarine'); }
+   function tel_blur() { $('#id_tel').css('background-color', 'white'); }
+   function email_focus() { $('#id_email').css('background-color', 'Mediumaquamarine'); }
+   function email_blur() { $('#id_email').css('background-color', 'white'); }
+   function message_focus() { $('#id_message').css('background-color', 'Mediumaquamarine'); }
+   function message_blur() { $('#id_message').css('background-color', 'white'); }
+
+   $('#b1').mouseover(b1_point);
+   $('#b1').mouseout(b1_unpoint);
+   $('#id_name').focus(name_focus);
+   $('#id_name').blur(name_blur);
+   $('#id_city').focus(city_focus);
+   $('#id_city').blur(city_blur);
+   $('#id_tel').focus(tel_focus);
+   $('#id_tel').blur(tel_blur);
+   $('#id_email').focus(email_focus);
+   $('#id_email').blur(email_blur);
+   $('#id_message').focus(message_focus);
+   $('#id_message').blur(message_blur);
+
+</script>
+
+{% endblock %}
+
