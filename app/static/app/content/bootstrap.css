@@ -311,11 +311,11 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.428571429;
-  color: #333333;
-  background-color: #ffffff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #ffffff;
+    background-color: #f79c7a;
 }
 
 input,
@@ -335,13 +335,13 @@ textarea {
 }
 
 a {
-  color: #428bca;
+  color: #4d120c;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #2a6496;
+  color: #df1700;
   text-decoration: underline;
 }
 
@@ -784,8 +784,7 @@ pre code {
 }
 
 .row {
-  margin-right: -15px;
-  margin-left: -15px;
+  margin: 25px;
 }
 
 .row:before,
@@ -1105,7 +1104,9 @@ pre code {
     width: 25%;
   }
   .col-md-4 {
-    width: 33.33333333333333%;
+        width: 33.33333333333333%;
+        color: #ffffff;
+        text-align: center;
   }
   .col-md-5 {
     width: 41.66666666666667%;
@@ -2009,7 +2010,7 @@ textarea.input-lg {
   vertical-align: middle;
   cursor: pointer;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 6px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -2049,9 +2050,9 @@ fieldset[disabled] .btn {
 }
 
 .btn-default {
-  color: #333333;
+  color: #ff745f;
   background-color: #ffffff;
-  border-color: #cccccc;
+  border-color: #770000;
 }
 
 .btn-default:hover,
@@ -2059,9 +2060,9 @@ fieldset[disabled] .btn {
 .btn-default:active,
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
-  color: #333333;
-  background-color: #ebebeb;
-  border-color: #adadad;
+  color: #ff745f;
+  background-color: #770000;
+  border-color: #ffffff;
 }
 
 .btn-default:active,
@@ -4194,7 +4195,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-brand {
   float: left;
   padding: 15px 15px;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 20px;
 }
 
@@ -4501,8 +4502,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse {
-  background-color: #222222;
-  border-color: #080808;
+    background-color: #770000;
+    border-color: #770000;
 }
 
 .navbar-inverse .navbar-brand {
@@ -4516,25 +4517,25 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse .navbar-text {
-  color: #999999;
+  color: #000000;
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: #ff0000;
+  color: #ffffff;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-  color: #00ff21;
-  background-color: orangered;
-  border-radius:20%;
+  color: #ffffff;
+  background-color: #ff745f;
+  border-radius:5%;
 }
 
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
   color: #ffffff;
-  background-color: #080808;
+  background-color: #4b493c;
 }
 
 .navbar-inverse .navbar-nav > .disabled > a,
@@ -4929,13 +4930,14 @@ a.list-group-item.active > .badge,
 }
 
 .jumbotron {
-  padding: 30px;
-  margin-bottom: 30px;
-  font-size: 21px;
-  font-weight: 200;
-  line-height: 2.1428571435;
-  color: inherit;
-  background-color: #eeeeee;
+    padding: 30px;
+    margin-bottom: 30px;
+    font-size: 21px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 2.1428571435;
+    color: #770000;
+    background-color: #ff745f;
 }
 
 .jumbotron h1 {
@@ -6024,8 +6026,8 @@ body.modal-open,
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   display: block;
-  height: auto;
-  max-width: 100%;
+  height: 800px;
+  width: 800px;
   line-height: 1;
 }
 
@@ -6036,7 +6038,7 @@ body.modal-open,
 }
 
 .carousel-inner > .active {
-  left: 0;
+  left: 170px;
 }
 
 .carousel-inner > .next,
@@ -6056,7 +6058,7 @@ body.modal-open,
 
 .carousel-inner > .next.left,
 .carousel-inner > .prev.right {
-  left: 0;
+  left: 170px;
 }
 
 .carousel-inner > .active.left {
@@ -6068,17 +6070,17 @@ body.modal-open,
 }
 
 .carousel-control {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 15%;
-  font-size: 20px;
-  color: #ffffff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 15%;
+    font-size: 25px;
+    color: #770000;
+    text-align: justify;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    opacity: 0.5;
+    filter: alpha(opacity=50);
 }
 
 .carousel-control.left {
@@ -6176,8 +6178,8 @@ body.modal-open,
   padding-top: 20px;
   padding-bottom: 20px;
   color: #ffffff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  text-align: justify;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .carousel-caption .btn {

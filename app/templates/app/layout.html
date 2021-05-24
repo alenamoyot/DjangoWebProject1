@@ -20,14 +20,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/" class="navbar-brand"> <img src="{% static 'app/content/logo.jpg' %}" alt="logo" width="20" height="20"/> </a> {#Логотип сайта#}
+                <a href="/" class="navbar-brand"> <img src="{% static 'app/content/logo.jpg' %}" alt="logo" width="60" height="60"/> </a> {#Логотип сайта#}
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="{% url 'home' %}">Главная</a></li>
-                    <li><a href="{% url 'catalog' %}">Каталог</a></li>
-                    <li><a href="{% url 'trash' %}">Корзина</a></li>
-                    <li><a href="{% url 'about' %}">Обо мне</a></li>
+                    <li><a href="{% url 'catalog' %}">Каталог</a></li>                  
+                    <li><a href="{% url 'about' %}">О нас</a></li>
                     <li><a href="{% url 'contact' %}">Контакты</a></li>
                     <li><a href="{% url 'links' %}">Полезные ресурсы</a></li>
                     {% if user.is_superuser %}
@@ -36,6 +35,7 @@
                     <li><a href="{% url 'videopost' %}">Видео</a></li>
                     <li><a href="{% url 'blog' %}">Блог</a></li>
                     <li><a href="{% url 'anketa' %}">Обратная связь</a></li>
+                    <li><a href="{% url 'trash' %}">Корзина</a></li> 
                     {% if not user.is_authenticated %}
                     <li><a href="{% url 'registration' %}">Регистрация</a></li>
                     {% endif %}

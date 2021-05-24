@@ -11,6 +11,9 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django.db import models
 from .models import Blog
+from .models import Comment # использование модели комментариев
+from .forms import CommentForm # использование формы ввода комментария
+from .forms import BlogForm
 from .models import Products
 from .models import Orders
 
@@ -178,7 +181,7 @@ def newpost(request):
         'app/newpost.html',
         {
             'blogform': blogform,
-            
+            'title': 'Добавить статью блога',
             'year': datetime.now().year,
         }
     )

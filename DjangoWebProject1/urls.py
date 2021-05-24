@@ -51,6 +51,9 @@ urlpatterns = [
      url(r'^trash$', app.views.trash, name='trash'),
      url(r'^admin/', include(admin.site.urls)),
      url(r'^(?P<parametr>\d+)/$', app.views.blogpost, name='blogpost'),
+     url(r'^addtotrash/(?P<aid>\d+)/$', app.views.addtotrash, name='addtotrash'),
+     url(r'^delproduct/(?P<did>\d+)/$', app.views.delproduct, name='delproduct'),
+     url(r'^buyproduct/(?P<bid>\d+)/$', app.views.buyproduct, name='buyproduct'),
      url(r'^videopost$', app.views.videopost, name='videopost'),
 
     # Uncomment the admin/doc line below to enable admin documentation:

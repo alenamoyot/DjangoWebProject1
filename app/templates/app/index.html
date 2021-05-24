@@ -4,8 +4,7 @@
 
 <div class="jumbotron">
     <h1>Сам себе кондитер</h1>
-    <p class="lead"> Здесь есть гастрономические новости и статьи, инструкции и лайфхаки, мастер-классы и энциклопедия продуктов и, конечно, рецепты.</p>
-    <p><a href="https://" class="btn btn-primary btn-large">Узнать больше &raquo;</a></p>
+    <p class="lead"> Здесь есть рецепты и лайфхаки, мастер-классы и, конечно, пошаговые инструкции с фото.</p>
 </div>
 
 <div class="row">
@@ -14,17 +13,17 @@
         <p>
            
         </p>
-        <p><a class="btn btn-default" href="http://">Узнать больше &raquo;</a></p>
+        <p><a class="btn btn-default" href="{% url 'videopost' %}">Узнать больше &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Гастрономические новости</h2>
-        <p></p>
-        <p><a class="btn btn-default" href="https://">Узнать больше &raquo;</a></p>
+        <h2>Эксклюзивные рецепты</h2>
+        <p>Рецепты собственной разработки, технологические карты приготовления тортов с фотографиями</p>
+        <p><a class="btn btn-default" href="{% url 'catalog' %}">Узнать больше &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h2>Сделать заказ торта к вашему торжеству.</h2>
-        <p> </p>
-        <p><a class="btn btn-default" href="http://">Узнать больше &raquo;</a></p>
+        <p>Оставьте свою зявку в разделе обратная связь и мы свяжемся с вами по электронной почте. </p>
+        <p><a class="btn btn-default" href="{% url 'anketa' %}">Оставить заявку &raquo;</a></p>
     </div>
 </div>
 {% load staticfiles %}
@@ -39,7 +38,7 @@
             <img src="{% static 'app/content/banner1.jpg'%} " alt="Первый слайд" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
-                    Здесь можно ознакомиться с информацией обо мне.
+                    Здесь можно ознакомиться с информацией о нас.
                     <a class="btn btn-default" href="{% url 'about' %}">
                         Читать далее
                     </a>

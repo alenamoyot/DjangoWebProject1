@@ -30,6 +30,24 @@ class Blog(models.Model):
 
 admin.site.register(Blog)
 
+class Comment(models.Model):
+    text = models.TextField(verbose_name = "Комментарий")
+    date = models.DateTimeField(default = datetime.now(), db_index = True, verbose_name = "Дата")
+    author = models.ForeignKey(User, on_delete = models.CASCADE, verbose_name = "Автор")
+    post = models.ForeignKey(Blog, on_delete = models.CASCADE, verbose_name = "Статья")
+    
+    def __str__(self): # метод возвращает название, используемое для представления отдельных записей в административном разделе
+        return 'Комментарий %s к %s' % (self.author, self.post)
+    
+    class Meta:
+        db_table = "Comments" # имя таблицы для модели
+        verbose_name = "Комментарий" # имя, под которым модель будет отображаться в административном разделе (для одной статьи блога)
+        verbose_name_plural = "Комментарии к статьям блога" # тоже для всех статей блога
+        ordering = ["-date"] # порядок сортировки данных в модели ("-" означает по убыванию)
+
+admin.site.register(Comment)
+
+
 class Products(models.Model):
     title = models.CharField(max_length = 100, verbose_name = "Название")
     description = models.TextField(verbose_name = "Описание")
